@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumora Tech — Dashboard</title>
+  
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div class="sidebar">
+      <h2>Lumora Tech</h2>
+      <ul>
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href=""><i class="fas fa-folder"></i> Chats</a></li>
+        <li><a href=""><i class="fas fa-share-alt"></i> Dashboard</a></li>
+        <li><a href=""><i class="fas fa-trash"></i> Notification</a></li>
+        <!-- <li><a href=""><i class="fas fa-cog"></i> Settings</a></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+   
+    <div id="topbar">
+      <div class="topbar-left">
+        <!-- <input type="text" placeholder="Search files" /> -->
+         <div class="filter-bar">
+  <input type="text" id="searchBar" placeholder="Search files...">
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="image">Images</option>
+    <option value="document">Documents</option>
+    <option value="video">Videos</option>
+    <option value="other">Others</option>
+  </select>
+</div>
+
+
+        
+  Upload
+  <input type="file" id="fileInput" hidden multiple>
+</label>
+
+      </div>
+      <!-- <div class="topbar-right">
+        <img src="profile.jpg" alt="User" class="profile-img">
+      </div> -->
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="wrap">
+    <header>
+      <div>
+        <h1>Welcome Lumorian</h1>
+        <div class="hint">This is our personal file manager.</div>
+      </div>
+      
+
+      <div class="controls">
+        <label class="btn" id="uploadLabel">Upload</label>
+        <button class="btn ghost" id="clearAllBtn" title="Clear everything">Clear All</button>
+      </div>
+    </header>
+
+    <!-- hidden input (script wires it) -->
+    <input id="fileInput" type="file" multiple hidden />
+
+
+    <!-- where files are shown -->
+    <div id="fileGrid" class="grid" aria-live="polite"></div>
+    <div id="fileList"></div>
+
+
+    <p style="margin-top:12px;color:var(--sidebar);font-size:13px">
+      <!-- <code>localStorage.removeItem('lt_files_v1')</code> -->
+    </p>
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <p style="text-align: center;">Powered by Lumora-technologies</p>
+
+</body>
+</html>
