@@ -302,7 +302,7 @@ body {
 }
 
 #searchBar, #categoryFilter {
-  padding: 8px 12px;
+  padding: 8px 12px 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
@@ -323,6 +323,7 @@ body {
 #categoryFilter option:hover{
     background: var(--bg);
 }
+
 
 
 
